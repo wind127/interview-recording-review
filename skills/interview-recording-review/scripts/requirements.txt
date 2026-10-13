@@ -1,0 +1,4 @@
+faster-whisper==1.2.1
+av==16.0.1
+imageio-ffmpeg==0.6.0
+ctranslate2>=4.4.0,<5

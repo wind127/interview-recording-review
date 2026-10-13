@@ -1,0 +1,4 @@
+interface:
+  display_name: "面试录屏整理与复盘"
+  short_description: "从录屏提取带时间索引的问答，核对技术内容并生成证据复盘和复练题"
+  default_prompt: "使用 $interview-recording-review 整理这份面试录屏，保留时间索引并给出基于回答证据的复盘。"
