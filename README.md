@@ -27,8 +27,8 @@ $interview-recording-review 整理这份面试录屏：/path/to/interview.mp4，
 ```powershell
 python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements.txt
-.venv\Scripts\python.exe skills/interview-recording-review/scripts/recording.py prepare "interview.mp4" --work-dir "work/interview"
-.venv\Scripts\python.exe skills/interview-recording-review/scripts/recording.py transcribe --work-dir "work/interview" --model small --device cpu
+.venv\Scripts\python.exe skills/interview-recording-review/scripts/recording.py prepare "interview.mp4" --work-dir "interview/work"
+.venv\Scripts\python.exe skills/interview-recording-review/scripts/recording.py transcribe --work-dir "interview/work" --model small --device cpu
 ```
 
 安装后的Skill仍自带`scripts/requirements.txt`，可直接用其绝对路径安装依赖。Linux/macOS将Python入口改为`.venv/bin/python`。
@@ -41,6 +41,8 @@ python -m venv .venv
 - 工具可用时增加一页HTML概览；Markdown报告可独立使用。
 
 本地脚本输出`metadata.json`、音频、参考帧，以及分次运行的JSONL/TXT/SRT和运行状态。裁片转写仍使用原录屏时间；已完成的同配置结果可复用，失败结果保留，不把部分识别宣称为完整成功。
+
+默认在录屏旁创建同名文件夹（去掉扩展名）：报告和概览放在根目录，核对材料放在`work/`。例如`面试录屏/某次面试.mp4`的结果保存到`面试录屏/某次面试/`；用户指定位置时以其要求为准。
 
 ## 设计边界
 
