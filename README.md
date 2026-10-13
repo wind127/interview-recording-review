@@ -6,6 +6,12 @@
 
 ## 安装与使用
 
+复制给Codex即可安装：
+
+```text
+安装这个Skill：https://github.com/wind127/interview-recording-review/tree/main/skills/interview-recording-review
+```
+
 把仓库中的`skills/interview-recording-review`完整目录复制到你的Skill目录。Codex的通常位置为`~/.codex/skills/`；用户自定义位置时以其配置为准。
 
 调用示例：
